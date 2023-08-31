@@ -21,6 +21,6 @@
     ],
     "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/server/apis/alchemy"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/server/apis/alchemy", "server/db/conn.mjs"],
   "exclude": ["node_modules"]
 }
