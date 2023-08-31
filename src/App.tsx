@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <main className="flex flex-col w-screen h-screen space-y-10 py-8">
+    <main className="flex flex-row w-screen h-screen space-x-10 py-8">
       <Board xIsNext={xIsNext} squares={squares} onMove={onMove} />
       <History />
     </main>
