@@ -11,8 +11,9 @@ export enum Player {
 export type SquareArray = Array<Player | null>;
 
 export type Score = {
-    Player_X: string;
-    Player_O: string;
-    Winner: string;
-    Board: SquareArray;
+    player_X: string;
+    player_O: string;
+    winner: string;
+    board: SquareArray;
+    date: Date;
 }

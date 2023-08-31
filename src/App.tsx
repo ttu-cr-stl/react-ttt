@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Board } from "./components/Board";
 import { Player, SquareArray } from "./types";
+import { History } from "./components/History";
 
 function App() {
   const [squares, setSquares] = useState<SquareArray>(Array(9).fill(null));
@@ -11,8 +12,9 @@ function App() {
   }
 
   return (
-    <main className="w-screen h-screen">
+    <main className="flex flex-col w-screen h-screen space-y-10">
       <Board xIsNext={xIsNext} squares={squares} onMove={onMove} />
+      <History />
     </main>
   );
 }

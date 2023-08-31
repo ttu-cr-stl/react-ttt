@@ -29,10 +29,11 @@ export const calculateWinner = (
 
 export const saveGame = async (players: PlayerNameType, winner: Player | "Draw", squares: SquareArray) => {
     const game = await axios.post("http://localhost:5050/games", {
-      Player_X: players.Player_X,
-      Player_O: players.Player_O,
+      player_X: players.Player_X,
+      player_O: players.Player_O,
       winner: winner,
-      squares: squares,
+      board: squares,
+      date: new Date(),
     });
     return game;
 }

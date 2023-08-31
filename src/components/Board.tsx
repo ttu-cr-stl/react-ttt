@@ -40,6 +40,10 @@ export const Board = ({ xIsNext, squares, onMove } : { xIsNext: boolean, squares
             break;
     }
 
+    const newGame = () => {
+        window.location.reload();
+    }
+
     return (
         <div className="flex flex-col space-y-4 p-4">
             <div className="flex flex-col space-y-2">
@@ -57,6 +61,9 @@ export const Board = ({ xIsNext, squares, onMove } : { xIsNext: boolean, squares
                 {squares.map((square, i) => (
                     <Square key={i} value={square} onClick={() => handleMove(i)} />
                 ))}
+            </div>
+            <div onClick={() => newGame()} className="flex items-center justify-center w-fit border border-black rounded-md px-4 py-2 cursor-pointer hover:shadow-md">
+                <span>New Game</span>
             </div>
         </div>
     )
