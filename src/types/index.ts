@@ -15,5 +15,5 @@ export type Score = {
     player_O: string;
     winner: string;
     board: SquareArray;
-    date: Date;
+    date: string;
 }

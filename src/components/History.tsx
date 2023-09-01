@@ -1,5 +1,6 @@
 import { useGameHistory } from "src/utils/hooks/useGameHistory"
 import { Square } from "./Square"
+import { DateTime } from "luxon"
 
 
 export const History = () => {
@@ -18,7 +19,7 @@ export const History = () => {
                         </div>
                         <div className="flex space-x-2">
                             <span>Winner <b>{game.winner}</b></span>
-                            <span>{game.date && game.date.toString()}</span>
+                            <span>{game.date && (DateTime.fromISO(game.date)).toLocaleString(DateTime.DATETIME_SHORT)}</span>
                         </div>
                         <div className="w-24 h-24 grid grid-cols-3 grid-rows-3 gap-2">
                             {game.board.map((square, i) => (
